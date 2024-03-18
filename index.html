@@ -12,41 +12,43 @@
 
 </head>
 <body>
+  <script src="main.js"></script>
+
   <div class="main">
     <h1>Weather app</h1>
     <div class="container">
 
       <div class="searchbar">
-        <form action="#">
-          <input type="text" placeholder="Search" alt="Search bar for weather">
+        <form id="cityForm">
+          <input type="text" id="cityInput" placeholder="Search" alt="Search bar for weather">
           <input type="image" src="/img/search.png" alt="Submit button" width="40" height="40">
         </form>
           
         
       </div>
 
-      <div class="main-info">
+      <div class="main-info" id="main-info" style="display: none;">
 
         <div class="image">
-          <img src="/img/weather.png" alt="weather icon" width="200" height="200" >
+          <h1 style="font-size: 5rem; margin-bottom: 3rem" id="weatherCondition">Cloudy</h1>
         </div>
         <div class="temperature">
-          <p>15°C</p>
+          <p id="p_temp">15°C</p>
         </div>
 
         <div class="name">
-          <p>Warsaw</p>
+          <p id="p_name">Warsaw</p>
         </div>
 
       </div>
 
-      <div class="description">
+      <div class="description" id="description" style="display: none;">
         
         <div class="left">
           <img src="/img/humidity.png" alt="humidity" width="40" height="40">
           <div class="text">
 
-            <h3>60%</h3>
+            <h3 id="p_humi">60%</h3>
             <p>Humidity</p>
 
           </div>
@@ -57,7 +59,7 @@
           <img src="/img/windspeed.png" alt="wind speed" width="40" height="40" >
           <div class="text">
             
-            <h3>18km/h</h3>
+            <h3 id="p_wspeed">18km/h</h3>
             <p>Wind Speed</p>
 
           </div>
